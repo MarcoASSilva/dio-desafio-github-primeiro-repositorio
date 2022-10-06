@@ -1,0 +1,286 @@
+GIT.
+
+O que vamos aprender??
+
+Mudar de pastas
+Listar as pastas
+Criar pastas/arquivos
+Deletar pastas/arquivos
+
+Windows e   Unix, possuem comandos diferentes...
+ - cd        - cd
+ - dir       - ls
+ - mkdir     - mkdir
+ - del/rmdir - rm -rf
+
+
+comandos Windows
+cls   - limpar tela
+dir   - listar as pastar
+cd    - navegar entre as pastas
+mkdir - criar pasta
+echo  - criar arquivo
+del   - deletar arquivos de uma pasta informada
+rmdir - deletar a pasta e todos os arquivos dela.
+    rmdir "pasta" /s /q
+
+INSTALANDO O GIT
+OK..
+
+Usando o comando (openssl sha1) para encriptar o arquivo.
+
+openssl sha1 teste.txt
+SHA1(teste.txt)= abd38854e29469301b62913edf0a0a3bad5169bc
+
+SHA1(teste.txt)= 838a33aed6fc9f411bd146a87d0753bff055ac1e
+
+
+Objetos internos do GIT
+BLOBS
+TREES
+COMMITS
+
+BLOBS
+echo 'conteudo' | git hash-object --stdin   
+
+echo -e 'blob 9\0conteudo' | openssl sha1
+
+TREE
+é uma arvore q pode apontar para uma bolha ou para outra arvore e gera um sha1 tambem
+se uma bolha sofre alteracao, respectivamente o sha1 da arvore também sera alterado.
+
+COMMIT
+tambem gera um sha1 unico
+commit aponta pra uma arvore
+cada commit guarda as informacoes abaixo
+  tree - arvore
+  parente - o ultimo commit feito
+  autor - quem realizou o commit
+  mensagem - "inicia!"
+  timestamp - data e hora q o commit foi feito
+
+
+Git é um sistema distribuido seguro.
+
+
+CHAVE SSH e Token
+
+Chave SSH
+é uma forma de estabelecer uma conexao segura e encriptada entre duas maquinas.
+estabelecendo a conexao com duas chaves uma publica e uma privada
+
+Gerando uma chave ssh
+
+ssh-keygen -t ed25519 -C ma.marcoantonio.ma@gmail.com
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/Miguel/.ssh/id_ed25519):
+
+
+Inicializando a chave SSH
+eval $(ssh-agent -s)
+Agent pid 1498
+
+ssh-add id_ed25519
+Enter passphrase for id_ed25519:
+Identity added: id_ed25519 (ma.marcoantonio.ma@gmail.com)
+
+
+
+git@github.com:MarcoASSilva/aula_html5_css3.git
+
+
+TOKEN DE ACESSO PESSOAL
+
+Gerar um token no github
+
+===== PRIMEIROS COMANDOS COM O GIT ============
+
+Iniciar o GIT
+  git init
+
+Iniciar o versionamento
+  git add
+
+Criar um commit
+  git commit
+
+
+Configurações iniciais para usar o git
+git config --global user.email "ma.marcoantonio.ma@gmail.com"
+git config --global user.name Marco
+
+Adicionando um arquivo.
+
+
+Ciclo de vida dos arquivos.
+Untracked
+Tracked
+  Unmodified
+  Modified
+  Staged
+
+Ambiente Desenvolvimento
+   WORKING DIRECTORY
+   STAGING AREA
+   LOCAL REPOSITORY
+
+Servidor
+   REMOTE REPOSITORY
+
+
+
+Comando muito importante...
+git status
+
+mover um arquivo de pasta
+mv 'nome do arquivo' ./"diretorio"/
+
+traz lista de configuração do meu git
+git config --list
+
+resetar uma configuração
+git config --global --unset user.email
+git config --global --unset user.name
+
+
+git as listas de repositorio remote cadastrados no github
+git remote -v
+
+
+
+enviar as alterações para o github
+git push origin master
+
+puxar as alterações do github para o git
+git pull origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
